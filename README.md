@@ -9,6 +9,7 @@
 3. 函数运行入口在`Program.cs`
 
 `The type name 'SqlConnection' could not be found in the namespace 'System.Data.SqlClient'. This type has been forwarded to assembly 'System.Data.SqlClient, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' Consider adding a reference to that assembly.`
+
 在`.NET Core` 或 `.NET 5+` 项目中，`System.Data.SqlClient` 不再是默认包含的一部分，需要手动[添加](https://www.nuget.org/packages/System.Data.SqlClient),此处使用`.NET CLI`方式：`dotnet add package System.Data.SqlClient --version 4.9.0`
 
 > 'SqlConnection' is obsolete: 'Use the [Microsoft.Data.SqlClient](https://learn.microsoft.com/zh-cn/sql/connect/ado-net/introduction-microsoft-data-sqlclient-namespace) package instead.'
